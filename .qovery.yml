@@ -3,6 +3,10 @@ application:
   name: "ytdl-server"
   project: "ytdl-server"
   organization: "QoveryCommunity"
+  publicly_accessible: true
+  cpu: 2
+  port: 8080
+  ram: 1GB
   storage:
   - name: "ytdl-server"
     size: "10"
