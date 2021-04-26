@@ -1,0 +1,11 @@
+---
+application:
+  name: "ytdl-server"
+  project: "ytdl-server"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-ytdl-server"
+  routes:
+  - application_name: "ytdl-server"
+    paths:
+    - "/*"
