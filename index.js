@@ -1,8 +1,14 @@
 const express = require('express')
+const cors = require('cors')
 const fs = require('fs')
 const ytdl = require('ytdl-core')
 const app = express()
 const port = process.env.PORT || 4000
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
 
 const itags_keys = [
     '5',
@@ -126,6 +132,8 @@ app.get('/', async (req, res) => {
     });
     
 })
+
+app.use(cors(corsOptions))
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
