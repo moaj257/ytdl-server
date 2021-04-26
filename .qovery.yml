@@ -3,6 +3,11 @@ application:
   name: "ytdl-server"
   project: "ytdl-server"
   organization: "QoveryCommunity"
+  storage:
+  - name: "ytdl-server"
+    size: "10"
+    type: "fast_ssd"
+    mount_point: "/mnt/ytdl-server"
 routers:
 - name: "main-ytdl-server"
   routes:
