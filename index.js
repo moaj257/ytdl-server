@@ -2,7 +2,7 @@ const express = require('express')
 const fs = require('fs')
 const ytdl = require('ytdl-core')
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000
 
 const itags_keys = [
     '5',
@@ -93,7 +93,7 @@ const millisToMinutesAndSeconds = (millis) => {
 const sortByName = (objs) => objs.sort((a, b) => a.name.localeCompare(b.name));
 
 
-app.get('/info', async (req, res) => {
+app.get('/', async (req, res) => {
     const {query} = req;
     const {uri} = query;
     const isValidUrl = ytdl.validateURL(uri);
